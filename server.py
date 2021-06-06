@@ -5,7 +5,7 @@ serverPort = int(portString) if portString != "" else 80  # Default to port 80
 
 serverSocket = socket(AF_INET, SOCK_STREAM)
 serverSocket.bind(("", serverPort))
-serverSocket.listen(1)  # Listen for incoming TCP requests
+serverSocket.listen(1)  # Listen for incoming TCP requests (1 is the number of "in-flight" packets)
 
 print("Server started on port " + str(serverPort) + "\n")
 
